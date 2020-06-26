@@ -1,0 +1,13 @@
+version: '3'
+services:
+  userapi:
+    image: 127.0.0.1:5000/userapi
+    hostname: "userapi"
+    ports:
+      - "5004:80"
+    networks:
+      - microservicenetwork
+
+networks:
+  microservicenetwork:
+    external: true
